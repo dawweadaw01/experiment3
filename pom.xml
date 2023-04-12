@@ -146,6 +146,12 @@
             <version>1.18.24</version>
             <scope>compile</scope>
         </dependency>
+        <!--引入hikaricp-->
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>4.0.3</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>experiment3</finalName>
