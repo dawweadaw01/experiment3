@@ -23,7 +23,7 @@ public class DepartmentController {
     @RequestMapping("search")
     public ModelAndView search(Department condition, @RequestParam(defaultValue = "1") int pageNo) {
         ModelAndView mv = new ModelAndView("dep/list");
-        PageHelper.startPage(pageNo, 10);
+        PageHelper.startPage(pageNo, 3);
         List<Department> departmentList = departmentService.find(condition);
         PageInfo pageInfo = new PageInfo(departmentList);
 

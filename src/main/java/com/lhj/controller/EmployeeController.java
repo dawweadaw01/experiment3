@@ -27,7 +27,7 @@ public class EmployeeController {
     @RequestMapping("search")
     public ModelAndView search(Employee condition, @RequestParam(defaultValue = "1") int pageNo) {
         ModelAndView mv = new ModelAndView("emp/list");
-        PageHelper.startPage(pageNo, 10);
+        PageHelper.startPage(pageNo, 3);
         List<Employee> employeeList = employeeService.find(condition);
         PageInfo pageInfo = new PageInfo(employeeList);
         List<Department> departmentList = departmentService.findAll();
