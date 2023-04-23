@@ -5,6 +5,10 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 public class DepartmentDaoTest {
     private static DepartmentDao mapper;
 
@@ -21,6 +25,8 @@ public class DepartmentDaoTest {
     }
     @Test
     public void testFindAll() {
-        System.out.println(1);
+        LocalDateTime localDate = LocalDateTime.now();
+        Timestamp timestamp = Timestamp.valueOf(localDate);
+        System.out.println(timestamp);
     }
 }
